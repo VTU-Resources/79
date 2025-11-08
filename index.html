@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VTU CS Premium</title>
+  <!-- Load Tailwind CSS from CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Set up Tailwind dark mode
+    tailwind.config = {
+      darkMode: 'class', // 'class' enables manual dark mode toggling
+      theme: {
+        extend: {
+          fontFamily: {
+            // Use a modern, clean font stack
+            sans: ['Poppins', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <!-- Use Poppins font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Apply the Poppins font */
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    /* Simple page transition */
+    .page {
+      display: none; /* Hide all pages by default */
+      min-height: 100vh; /* Ensure pages take full height */
+    }
+    .page.active {
+      display: block; /* Show only the active page */
+    }
+    
+    /* Shimmer animation for premium text */
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+    .animate-shimmer {
+      background-size: 200% auto;
+      animation: shimmer 3s linear infinite;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
+  
+  <!-- Main App Container -->
+  <div id="main-app">
+    <!-- Page Content -->
+    <main>
+      
+      <!-- 1. Home Page (Portal) -->
+      <div id="page-home" class="page p-4 pb-24 max-w-lg mx-auto">
+        <!-- Header -->
+        <div class="flex items-center space-x-3 mb-6">
+          <!-- AppLogo SVG -->
+          <svg class="w-12 h-12 text-indigo-600 dark:text-indigo-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+          </svg>
+          <div>
+            <h1 class="text-2xl font-bold text-gray-900 dark:text-white">VTU CS Premium Member</h1>
+            <p class="text-gray-600 dark:text-gray-400">Welcome to the portal</p>
+          </div>
+        </div>
+
+        <!-- Portal Boxes -->
+        <div class="space-y-4">
+          <!-- Box 1: Most Important Questions -->
+          <button
+            data-page="box1"
+            class="portal-box-button w-full p-6 border rounded-lg text-left transition-all duration-200 bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-indigo-500 dark:hover:border-indigo-400 shadow-sm"
+          >
+            <div class="flex items-center space-x-4">
+              <!-- Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-indigo-600 dark:text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+              </svg>
+              <div>
+                <p class="text-lg font-semibold text-gray-900 dark:text-white">Most Important Questions</p>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Modules 1 to 5</p>
+              </div>
+            </div>
+          </button>
+          
+          <!-- Box 2: Exact Answers -->
+          <button
+            data-page="box2"
+            class="portal-box-button w-full p-6 border rounded-lg text-left transition-all duration-200 bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-indigo-500 dark:hover:border-indigo-400 shadow-sm"
+          >
+            <div class="flex items-center space-x-4">
+              <!-- Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-green-600 dark:text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+              </svg>
+              <div>
+                <p class="text-lg font-semibold text-gray-900 dark:text-white">Exact Answers</p>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Modules 1 to 5</p>
+              </div>
+            </div>
+          </button>
+          
+          <!-- Box 3: Reference Materials -->
+          <button
+            data-page="box3"
+            class="portal-box-button w-full p-6 border rounded-lg text-left transition-all duration-200 bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-indigo-500 dark:hover:border-indigo-400 shadow-sm"
+          >
+            <div class="flex items-center space-x-4">
+              <!-- Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+              </svg>
+              <div>
+                <p class="text-lg font-semibold text-gray-900 dark:text-white">Reference Materials</p>
+                <p class="text-sm text-gray-600 dark:text-gray-400">(If Needed)</p>
+              </div>
+            </div>
+          </button>
+
+          <!-- New Heading -->
+          <h2 class="text-xl font-semibold text-gray-900 dark:text-white pt-2 text-center">
+            18PHY12 - Engineering Physics
+          </h2>
+        </div>
+      </div>
+      
+      <!-- 2. You Page (Profile) -->
+      <div id="page-you" class="page p-4 pb-24 max-w-lg mx-auto">
+        <h1 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Profile</h1>
+        
+        <!-- Premium Member Animation -->
+        <p class="text-lg font-medium bg-gradient-to-r from-purple-400 via-indigo-500 to-pink-500 bg-clip-text text-transparent animate-shimmer mb-6">
+          Premium Member
+        </p>
+
+        <ul class="divide-y divide-gray-200 dark:divide-gray-700">
+          <!-- Default Name -->
+          <li class="py-4">
+            <div class="flex items-center justify-between">
+              <span class="text-lg font-medium text-gray-900 dark:text-white">Default Name</span>
+              <span class="text-lg text-gray-600 dark:text-gray-400">Chandana</span>
+            </div>
+          </li>
+
+          <!-- Earned Badges -->
+          <li class="py-4">
+            <div>
+              <p class="text-lg font-medium text-gray-900 dark:text-white mb-3">Earned Badges</p>
+              <div class="flex space-x-3">
+                <!-- Badge 2023 -->
+                <span class="flex items-center justify-center bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-sm font-bold px-4 py-2 rounded-full shadow-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1.5" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  2023
+                </span>
+                <!-- Badge 2024 -->
+                <span class="flex items-center justify-center bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-sm font-bold px-4 py-2 rounded-full shadow-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1.5" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  2024
+                </span>
+                <!-- Badge 2025 -->
+                <span class="flex items-center justify-center bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-sm font-bold px-4 py-2 rounded-full shadow-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1.5" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  2025
+                </span>
+              </div>
+            </div>
+          </li>
+
+          <!-- Theme Toggle -->
+          <li class="py-4">
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="text-lg font-medium text-gray-900 dark:text-white">Theme</p>
+                <p id="theme-status" class="text-sm text-gray-600 dark:text-gray-400">
+                  Currently: Light Mode
+                </p>
+              </div>
+              <button
+                id="theme-toggle"
+                aria-label="Toggle theme"
+                class="relative inline-flex items-center h-6 rounded-full w-11 transition-colors bg-gray-200 dark:bg-gray-700"
+              >
+                <span
+                  id="theme-toggle-knob"
+                  class="translate-x-1 inline-block w-4 h-4 transform bg-white dark:bg-gray-400 rounded-full transition-transform flex items-center justify-center"
+                >
+                  <!-- SunIcon -->
+                  <svg id="theme-icon-light" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3 text-yellow-500">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-6.364-.386l1.591-1.591M3 12h2.25m.386-6.364l1.591 1.591M12 12a2.25 2.25 0 00-2.25 2.25c0 1.38.82 2.555 2.002 3.032A2.25 2.25 0 0012 12z" />
+                  </svg>
+                  <!-- MoonIcon (hidden by default) -->
+                  <svg id="theme-icon-dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3 text-indigo-300 hidden">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25c0 5.385 4.365 9.75 9.75 9.75 2.671 0 5.1-1.006 6.962-2.648z" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 3. Box 1 Page (Questions) -->
+      <div id="page-box1" class="page p-4 max-w-lg mx-auto">
+        <!-- Sub-page Header -->
+        <header class="relative flex items-center justify-center mb-6">
+          <button
+            class="nav-back-button absolute left-0 p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700"
+            aria-label="Go back"
+          >
+            <!-- BackIcon -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 text-gray-900 dark:text-white">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+            </svg>
+          </button>
+          <h1 class="text-xl font-bold text-gray-900 dark:text-white">Important Questions</h1>
+        </header>
+
+        <!-- Page Content -->
+        <div class="space-y-3">
+          <a href="https://drive.google.com/file/d/15vRz58s2_hvTRzZMqhGi-94MEjZNLMOP/view?usp=sharing" target="_blank" class="flex items-center space-x-3 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.102 1.101" /></svg>
+            <span class="font-medium text-gray-800 dark:text-gray-200">Module 1</span>
+          </a>
+          <a href="https://drive.google.com/file/d/1N8T8B7t5aSL5Umi1_fV71_7_bg6yzrRg/view?usp=sharing" target="_blank" class="flex items-center space-x-3 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.102 1.101" /></svg>
+            <span class="font-medium text-gray-800 dark:text-gray-200">Module 2</span>
+          </a>
+          <a href="https://drive.google.com/file/d/1wq0wStYKx6DEB614L2DBQ--gb-4AFH8L/view?usp=sharing" target="_blank" class="flex items-center space-x-3 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.102 1.101" /></svg>
+            <span class="font-medium text-gray-800 dark:text-gray-200">Module 3</span>
+          </a>
+          <a href="https://drive.google.com/file/d/1MK7dPPeMSzJm3RFM5Z0ZFrwdquScSzs_/view?usp=sharing" target="_blank" class="flex items-center space-x-3 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.102 1.101" /></svg>
+            <span class="font-medium text-gray-800 dark:text-gray-200">Module 4</span>
+          </a>
+          <a href="https://drive.google.com/file/d/1U8zaGq5AZ3SMa-bL3hq_OeYj8tzflRjm/view?usp=sharing" target="_blank" class="flex items-center space-x-3 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.102 1.101" /></svg>
+            <span class="font-medium text-gray-800 dark:text-gray-200">Module 5</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 4. Box 2 Page (Answers) -->
+      <div id="page-box2" class="page p-4 max-w-lg mx-auto">
+        <!-- Sub-page Header -->
+        <header class="relative flex items-center justify-center mb-6">
+          <button
+            class="nav-back-button absolute left-0 p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700"
+            aria-label="Go back"
+          >
+            <!-- BackIcon -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 text-gray-900 dark:text-white">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+            </svg>
+          </button>
+          <h1 class="text-xl font-bold text-gray-900 dark:text-white">Exact Answers</h1>
+        </header>
+
+        <!-- Page Content -->
+        <div class="space-y-3">
+          <a href="https://drive.google.com/file/d/1AJUwomlhH1ptVEwhcKfkY-1Z6S0WjbFV/view?usp=sharing" target="_blank" class="flex items-center space-x-3 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.102 1.101" /></svg>
+            <span class="font-medium text-gray-800 dark:text-gray-200">Module 1</span>
+          </a>
+          <a href="https://drive.google.com/file/d/1H7Ltk5ezFFeKTEvLzKogDiI6OGrcr-63/view?usp=sharing" target="_blank" class="flex items-center space-x-3 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.102 1.101" /></svg>
+            <span class="font-medium text-gray-800 dark:text-gray-200">Module 2</span>
+          </a>
+          <a href="https://drive.google.com/file/d/1HcqU9YjS8KIteLMO5xy8rfojhr1NZcMc/view?usp=sharing" target="_blank" class="flex items-center space-x-3 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.102 1.101" /></svg>
+            <span class="font-medium text-gray-800 dark:text-gray-200">Module 3</span>
+          </a>
+          <a href="https://drive.google.com/file/d/17-FJIqn7dH08XtW5Fyu-1O1Rg9zjUnZt/view?usp=sharing" target="_blank" class="flex items-center space-x-3 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.102 1.101" /></svg>
+            <span class="font-medium text-gray-800 dark:text-gray-200">Module 4</span>
+          </a>
+          <a href="https://drive.google.com/file/d/1oEzmHmNYz4nMzTCdUJSPT8TucXF0uS4F/view?usp=sharing" target="_blank" class="flex items-center space-x-3 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.102 1.101" /></svg>
+            <span class="font-medium text-gray-800 dark:text-gray-200">Module 5</span>
+          </a>
+        </div>
+      </div>
+      
+      <!-- 5. Box 3 Page (References) -->
+      <div id="page-box3" class="page p-4 max-w-lg mx-auto">
+        <!-- Sub-page Header -->
+        <header class="relative flex items-center justify-center mb-6">
+          <button
+            class="nav-back-button absolute left-0 p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700"
+            aria-label="Go back"
+          >
+            <!-- BackIcon -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 text-gray-900 dark:text-white">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+            </svg>
+          </button>
+          <h1 class="text-xl font-bold text-gray-900 dark:text-white">Reference Materials</h1>
+        </header>
+
+        <!-- Page Content -->
+        <div class="space-y-3">
+          <a href="https://drive.google.com/file/d/1E1RxvZogfgxa8IN661MdBcx8fEbW5PtU/view?usp=sharing" target="_blank" class="flex items-center space-x-3 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.102 1.101" /></svg>
+            <span class="font-medium text-gray-800 dark:text-gray-200">Reference 1</span>
+          </a>
+          <a href="https://drive.google.com/file/d/17edBGKGUUKNlYE9k48Ec-VrjDqGqlpqw/view?usp=sharing" target="_blank" class="flex items-center space-x-3 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.102 1.101" /></svg>
+            <span class="font-medium text-gray-800 dark:text-gray-200">Reference 2</span>
+          </a>
+          <a href="https://drive.google.com/file/d/1ykfZWmfE0KC8CLfoLwmKl7muwkXQ3ed9/view?usp=sharing" target="_blank" class="flex items-center space-x-3 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.102 1.101" /></svg>
+            <span class="font-medium text-gray-800 dark:text-gray-200">Reference 3</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 6. Box 4 Page (Physics) -->
+      <!-- <div id="page-box4" class="page p-4 max-w-lg mx-auto">
+        ...
+      </div> -->
+
+    </main>
+    
+    <!-- Bottom Navigation -->
+    <nav id="bottom-nav" class="fixed bottom-0 left-0 right-0 w-full max-w-lg mx-auto bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+      <div class="flex justify-around items-center h-16 px-2">
+        
+        <!-- Home (Portal) Button -->
+        <button
+          id="nav-home"
+          data-page="home"
+          class="nav-button flex flex-col items-center justify-center w-24 h-12"
+        >
+          <div
+            class="nav-icon-container flex items-center justify-center h-8 w-16 rounded-full bg-blue-100 dark:bg-blue-900"
+          >
+            <!-- HomeIconFilled -->
+            <svg
+              class="nav-icon w-6 h-6 text-blue-600 dark:text-blue-400"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+            </svg>
+          </div>
+          <span
+            class="nav-text text-xs font-medium text-blue-600 dark:text-blue-400"
+          >
+            Portal
+          </span>
+        </button>
+
+        <!-- You (Profile) Button -->
+        <button
+          id="nav-you"
+          data-page="you"
+          class="nav-button flex flex-col items-center justify-center w-24 h-12"
+        >
+          <div
+            class="nav-icon-container flex items-center justify-center h-8 w-16 rounded-full bg-transparent"
+          >
+            <!-- UserIconOutline -->
+            <svg
+              class="nav-icon w-6 h-6 text-gray-600 dark:text-gray-400"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A1.875 1.875 0 0118 22.5H6.002a1.875 1.875 0 01-1.501-2.382z"
+              />
+            </svg>
+          </div>
+          <span
+            class="nav-text text-xs font-medium text-gray-600 dark:text-gray-400"
+          >
+            Profile
+          </span>
+        </button>
+
+      </div>
+    </nav>
+  </div>
+
+  <script>
+    // --- App State ---
+    let currentPage = 'home';
+    let currentTheme = 'light';
+
+    // --- DOM Elements ---
+    const pages = {
+      home: document.getElementById('page-home'),
+      you: document.getElementById('page-you'),
+      box1: document.getElementById('page-box1'),
+      box2: document.getElementById('page-box2'),
+      box3: document.getElementById('page-box3'),
+      // box4: document.getElementById('page-box4'), // Removed this page
+    };
+    const mainApp = document.getElementById('main-app'); // Get the main app container
+    const bottomNav = document.getElementById('bottom-nav');
+    
+    // Portal Page
+    const portalBoxButtons = document.querySelectorAll('.portal-box-button');
+
+    // Nav
+    const navButtons = document.querySelectorAll('.nav-button');
+    const backButtons = document.querySelectorAll('.nav-back-button');
+    
+    // Settings Page
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeStatus = document.getElementById('theme-status');
+    const themeKnob = document.getElementById('theme-toggle-knob');
+    const themeIconLight = document.getElementById('theme-icon-light');
+    const themeIconDark = document.getElementById('theme-icon-dark');
+
+    // --- State Management Functions ---
+
+    function setPage(pageId) {
+      if (!pages[pageId]) return;
+      
+      mainApp.style.display = 'block';
+      currentPage = pageId;
+
+      // Hide all pages *within main app*
+      Object.keys(pages).forEach(key => {
+        pages[key].classList.remove('active');
+      });
+      
+      // Show the active page
+      pages[pageId].classList.add('active');
+
+      // Update bottom nav active state
+      navButtons.forEach(button => {
+        const isButtonActive = button.dataset.page === pageId;
+        const iconContainer = button.querySelector('.nav-icon-container');
+        const icon = button.querySelector('.nav-icon');
+        const text = button.querySelector('.nav-text');
+
+        if (isButtonActive) {
+          iconContainer.classList.add('bg-blue-100', 'dark:bg-blue-900');
+          iconContainer.classList.remove('bg-transparent');
+          icon.classList.add('text-blue-600', 'dark:text-blue-400');
+          icon.classList.remove('text-gray-600', 'dark:text-gray-400');
+          text.classList.add('text-blue-600', 'dark:text-blue-400');
+          text.classList.remove('text-gray-600', 'dark:text-gray-400');
+        } else {
+          iconContainer.classList.remove('bg-blue-100', 'dark:bg-blue-900');
+          iconContainer.classList.add('bg-transparent');
+          icon.classList.remove('text-blue-600', 'dark:text-blue-400');
+          icon.classList.add('text-gray-600', 'dark:text-gray-400');
+          text.classList.remove('text-blue-600', 'dark:text-blue-400');
+          text.classList.add('text-gray-600', 'dark:text-gray-400');
+        }
+      });
+      
+      // Show/hide bottom nav
+      if (pageId === 'home' || pageId === 'you') {
+        bottomNav.style.display = 'block';
+      } else {
+        bottomNav.style.display = 'none';
+      }
+
+      // Scroll to top on page change
+      window.scrollTo(0, 0);
+    }
+
+    function applyTheme(theme) {
+      currentTheme = theme;
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+        themeStatus.textContent = 'Currently: Dark Mode';
+        themeKnob.classList.add('translate-x-6');
+        themeKnob.classList.remove('translate-x-1');
+        themeIconLight.classList.add('hidden');
+        themeIconDark.classList.remove('hidden');
+      } else {
+        document.documentElement.classList.remove('dark');
+        themeStatus.textContent = 'Currently: Light Mode';
+        themeKnob.classList.remove('translate-x-6');
+        themeKnob.classList.add('translate-x-1');
+        themeIconLight.classList.remove('hidden');
+        themeIconDark.classList.add('hidden');
+      }
+      localStorage.setItem('vtu-premium-theme', theme);
+    }
+
+    function toggleTheme() {
+      applyTheme(currentTheme === 'light' ? 'dark' : 'light');
+    }
+
+    // --- Initialization ---
+
+    function initialize() {
+      // 1. Load and apply theme
+      const savedTheme = localStorage.getItem('vtu-premium-theme') || 'light';
+      applyTheme(savedTheme);
+      
+      // 2. Set initial page
+      setPage('home');
+
+      // 3. Attach all event listeners
+      themeToggle.addEventListener('click', toggleTheme);
+      
+      navButtons.forEach(button => {
+        button.addEventListener('click', () => setPage(button.dataset.page));
+      });
+      
+      portalBoxButtons.forEach(button => {
+        button.addEventListener('click', () => setPage(button.dataset.page));
+      });
+      
+      backButtons.forEach(button => {
+        // All back buttons go to the 'home' (portal) page
+        button.addEventListener('click', () => setPage('home'));
+      });
+    }
+
+    // Run initialization when the DOM is fully loaded
+    document.addEventListener('DOMContentLoaded', initialize);
+
+  </script>
+</body>
+</html>
