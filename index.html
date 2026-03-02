@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VTU CS Premium</title>
-  <!-- Load Tailwind CSS from CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     // Set up Tailwind dark mode
@@ -20,7 +19,6 @@
       },
     };
   </script>
-  <!-- Use Poppins font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -52,16 +50,11 @@
 </head>
 <body class="bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
   
-  <!-- Main App Container -->
   <div id="main-app">
-    <!-- Page Content -->
     <main>
       
-      <!-- 1. Home Page (Portal) -->
       <div id="page-home" class="page p-4 pb-24 max-w-lg mx-auto">
-        <!-- Header -->
         <div class="flex items-center space-x-3 mb-6">
-          <!-- AppLogo SVG -->
           <svg class="w-12 h-12 text-indigo-600 dark:text-indigo-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
           </svg>
@@ -71,15 +64,12 @@
           </div>
         </div>
 
-        <!-- Portal Boxes -->
         <div class="space-y-4">
-          <!-- Box 1: Most Important Questions -->
           <button
             data-page="box1"
             class="portal-box-button w-full p-6 border rounded-lg text-left transition-all duration-200 bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-indigo-500 dark:hover:border-indigo-400 shadow-sm"
           >
             <div class="flex items-center space-x-4">
-              <!-- Icon -->
               <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-indigo-600 dark:text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
               </svg>
@@ -90,59 +80,20 @@
             </div>
           </button>
           
-          <!-- Box 2: Exact Answers -->
-          <button
-            data-page="box2"
-            class="portal-box-button w-full p-6 border rounded-lg text-left transition-all duration-200 bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-indigo-500 dark:hover:border-indigo-400 shadow-sm"
-          >
-            <div class="flex items-center space-x-4">
-              <!-- Icon -->
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-green-600 dark:text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
-              </svg>
-              <div>
-                <p class="text-lg font-semibold text-gray-900 dark:text-white">Exact Answers</p>
-                <p class="text-sm text-gray-600 dark:text-gray-400">Modules 1 to 5</p>
-              </div>
-            </div>
-          </button>
-          
-          <!-- Box 3: Reference Materials -->
-          <button
-            data-page="box3"
-            class="portal-box-button w-full p-6 border rounded-lg text-left transition-all duration-200 bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-indigo-500 dark:hover:border-indigo-400 shadow-sm"
-          >
-            <div class="flex items-center space-x-4">
-              <!-- Icon -->
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 10h16M4 14h16M4 18h16" />
-              </svg>
-              <div>
-                <p class="text-lg font-semibold text-gray-900 dark:text-white">Reference Materials</p>
-                <p class="text-sm text-gray-600 dark:text-gray-400">(If Needed)</p>
-              </div>
-            </div>
-          </button>
-
-          <!-- New Heading -->
           <h2 class="text-xl font-semibold text-gray-900 dark:text-white pt-2 text-center">
             18PHY12 - Engineering Physics
           </h2>
         </div>
       </div>
       
-      <!-- 2. You Page (Profile) -->
       <div id="page-you" class="page p-4 pb-24 max-w-lg mx-auto">
         <h1 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Profile</h1>
         
-        <!-- Premium Member Animation -->
         <p class="text-lg font-medium bg-gradient-to-r from-purple-400 via-indigo-500 to-pink-500 bg-clip-text text-transparent animate-shimmer mb-6">
           Premium Member
         </p>
 
         <ul class="divide-y divide-gray-200 dark:divide-gray-700">
-          <!-- Default Name -->
           <li class="py-4">
             <div class="flex items-center justify-between">
               <span class="text-lg font-medium text-gray-900 dark:text-white">Candidate Name</span>
@@ -150,37 +101,38 @@
             </div>
           </li>
 
-          <!-- Earned Badges -->
           <li class="py-4">
             <div>
               <p class="text-lg font-medium text-gray-900 dark:text-white mb-3">Earned Badges</p>
-              <div class="flex space-x-3">
-                <!-- Badge 2023 -->
+              <div class="flex flex-wrap gap-3">
                 <span class="flex items-center justify-center bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-sm font-bold px-4 py-2 rounded-full shadow-sm">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1.5" viewBox="0 0 20 20" fill="currentColor">
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </svg>
                   2023
                 </span>
-                <!-- Badge 2024 -->
                 <span class="flex items-center justify-center bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-sm font-bold px-4 py-2 rounded-full shadow-sm">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1.5" viewBox="0 0 20 20" fill="currentColor">
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </svg>
                   2024
                 </span>
-                <!-- Badge 2025 -->
                 <span class="flex items-center justify-center bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-sm font-bold px-4 py-2 rounded-full shadow-sm">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1.5" viewBox="0 0 20 20" fill="currentColor">
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </svg>
                   2025
                 </span>
+                <span class="flex items-center justify-center bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-sm font-bold px-4 py-2 rounded-full shadow-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1.5" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  2026
+                </span>
               </div>
             </div>
           </li>
 
-          <!-- Theme Toggle -->
           <li class="py-4">
             <div class="flex items-center justify-between">
               <div>
@@ -198,11 +150,9 @@
                   id="theme-toggle-knob"
                   class="translate-x-1 inline-block w-4 h-4 transform bg-white dark:bg-gray-400 rounded-full transition-transform flex items-center justify-center"
                 >
-                  <!-- SunIcon -->
                   <svg id="theme-icon-light" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3 text-yellow-500">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-6.364-.386l1.591-1.591M3 12h2.25m.386-6.364l1.591 1.591M12 12a2.25 2.25 0 00-2.25 2.25c0 1.38.82 2.555 2.002 3.032A2.25 2.25 0 0012 12z" />
                   </svg>
-                  <!-- MoonIcon (hidden by default) -->
                   <svg id="theme-icon-dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3 text-indigo-300 hidden">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25c0 5.385 4.365 9.75 9.75 9.75 2.671 0 5.1-1.006 6.962-2.648z" />
                   </svg>
@@ -213,15 +163,12 @@
         </ul>
       </div>
 
-      <!-- 3. Box 1 Page (Questions) -->
       <div id="page-box1" class="page p-4 max-w-lg mx-auto">
-        <!-- Sub-page Header -->
         <header class="relative flex items-center justify-center mb-6">
           <button
             class="nav-back-button absolute left-0 p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700"
             aria-label="Go back"
           >
-            <!-- BackIcon -->
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 text-gray-900 dark:text-white">
               <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
             </svg>
@@ -229,7 +176,6 @@
           <h1 class="text-xl font-bold text-gray-900 dark:text-white">Important Questions</h1>
         </header>
 
-        <!-- Page Content -->
         <div class="space-y-3">
           <a href="https://drive.google.com/file/d/15vRz58s2_hvTRzZMqhGi-94MEjZNLMOP/view?usp=sharing" target="_blank" class="flex items-center space-x-3 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.102 1.101" /></svg>
@@ -254,15 +200,12 @@
         </div>
       </div>
 
-      <!-- 4. Box 2 Page (Answers) -->
       <div id="page-box2" class="page p-4 max-w-lg mx-auto">
-        <!-- Sub-page Header -->
         <header class="relative flex items-center justify-center mb-6">
           <button
             class="nav-back-button absolute left-0 p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700"
             aria-label="Go back"
           >
-            <!-- BackIcon -->
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 text-gray-900 dark:text-white">
               <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
             </svg>
@@ -270,7 +213,6 @@
           <h1 class="text-xl font-bold text-gray-900 dark:text-white">Exact Answers</h1>
         </header>
 
-        <!-- Page Content -->
         <div class="space-y-3">
           <a href="https://drive.google.com/file/d/1AJUwomlhH1ptVEwhcKfkY-1Z6S0WjbFV/view?usp=sharing" target="_blank" class="flex items-center space-x-3 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.102 1.101" /></svg>
@@ -295,15 +237,12 @@
         </div>
       </div>
       
-      <!-- 5. Box 3 Page (References) -->
       <div id="page-box3" class="page p-4 max-w-lg mx-auto">
-        <!-- Sub-page Header -->
         <header class="relative flex items-center justify-center mb-6">
           <button
             class="nav-back-button absolute left-0 p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700"
             aria-label="Go back"
           >
-            <!-- BackIcon -->
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 text-gray-900 dark:text-white">
               <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
             </svg>
@@ -311,7 +250,6 @@
           <h1 class="text-xl font-bold text-gray-900 dark:text-white">Reference Materials</h1>
         </header>
 
-        <!-- Page Content -->
         <div class="space-y-3">
           <a href="https://drive.google.com/file/d/1E1RxvZogfgxa8IN661MdBcx8fEbW5PtU/view?usp=sharing" target="_blank" class="flex items-center space-x-3 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.102 1.101" /></svg>
@@ -328,18 +266,11 @@
         </div>
       </div>
 
-      <!-- 6. Box 4 Page (Physics) -->
-      <!-- <div id="page-box4" class="page p-4 max-w-lg mx-auto">
-        ...
-      </div> -->
-
-    </main>
+      </main>
     
-    <!-- Bottom Navigation -->
     <nav id="bottom-nav" class="fixed bottom-0 left-0 right-0 w-full max-w-lg mx-auto bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
       <div class="flex justify-around items-center h-16 px-2">
         
-        <!-- Home (Portal) Button -->
         <button
           id="nav-home"
           data-page="home"
@@ -348,7 +279,6 @@
           <div
             class="nav-icon-container flex items-center justify-center h-8 w-16 rounded-full bg-blue-100 dark:bg-blue-900"
           >
-            <!-- HomeIconFilled -->
             <svg
               class="nav-icon w-6 h-6 text-blue-600 dark:text-blue-400"
               xmlns="http://www.w3.org/2000/svg"
@@ -365,7 +295,6 @@
           </span>
         </button>
 
-        <!-- You (Profile) Button -->
         <button
           id="nav-you"
           data-page="you"
@@ -374,7 +303,6 @@
           <div
             class="nav-icon-container flex items-center justify-center h-8 w-16 rounded-full bg-transparent"
           >
-            <!-- UserIconOutline -->
             <svg
               class="nav-icon w-6 h-6 text-gray-600 dark:text-gray-400"
               xmlns="http://www.w3.org/2000/svg"
